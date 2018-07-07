@@ -3,14 +3,14 @@
 		<a href="{{ site.baseurl }}">Home</a>
 
 		<!-- Nav pages -->
-	  {% for page in site.pages %}
+	  {% comment %} {% for page in site.pages %}
 	    {% if page.layout == "page" %}
 	      <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>
 	    {% endif %}
-	  {% endfor %}
+	  {% endfor %} {% endcomment %}
     
     <!-- Nav links -->
-	  {% comment %} {% include link.html %} {% endcomment %}
+	  {% include link.html %}
 
 	</div>
   
